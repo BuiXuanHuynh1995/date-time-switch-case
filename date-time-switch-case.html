@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng câu lệnh switch-case</title>
+</head>
+<body>
+<form>
+    <input id="inputMonth1" type="number">
+    <button type="button" onclick="ngayGio()">Tính số ngày</button>
+    <div id="kq1"></div>
+    <br/>
+    Và<br/><br/>
+    <input id="inputMonth2" type="number">
+    <button type="button" onclick="ngayGio1()">Tính số ngày</button>
+    <div id="kq2"></div>
+</form>
+</body>
+<script>
+    function ngayGio() {
+        let month = parseInt(document.getElementById("inputMonth1").value);
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("kq1").innerHTML = "Tháng " + month + " có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("kq1").innerHTML = "Tháng " + month + " có 28 ngày hoặc 29 ngày";
+                break;
+            default:
+                document.getElementById("kq1").innerHTML = "Tháng " + month + " có 30 ngày";
+                break;
+        }
+    }
+    function ngayGio1() {
+        let month2 = parseInt(document.getElementById("inputMonth2").value);
+        switch (month2) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("kq2").innerHTML = "Tháng " + month2 + " có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("kq2").innerHTML = "Tháng " + month2 + " có 28 ngày hoặc 29 ngày";
+                break;
+            default:
+                document.getElementById("kq2").innerHTML = "Tháng " + month2 + " có 30 ngày";
+                break;
+        }
+    }
+</script>
+</html>
